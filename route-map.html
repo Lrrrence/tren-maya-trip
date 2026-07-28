@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7f6e969eea40b36a28713e12ba0137ed {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+            z-index: 9999; background-color: white; padding: 15px 25px;
+            border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif; text-align: center;">
+    <h2 style="margin: 0 0 10px 0; color: #333;">Tren Maya: 12-Day Archaeological Route</h2>
+    <p style="margin: 0; font-size: 13px; color: #666;">
+        <span style="color: #d4651f;">&#9472;&#9472;</span> Tren Maya rail &nbsp;&nbsp;
+        <span style="color: red;">&#9679;</span> Overnight stop &nbsp;&nbsp;
+        <span style="color: darkgreen;">&#9679;</span> Maya ruins &nbsp;&nbsp;
+        <span style="color: blue;">&#9679;</span> Waterfall &nbsp;&nbsp;
+        <span style="color: green;">&#9679;</span> Airport
+    </p>
+</div>
+    
+            <div class="folium-map" id="map_7f6e969eea40b36a28713e12ba0137ed" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7f6e969eea40b36a28713e12ba0137ed = L.map(
+                "map_7f6e969eea40b36a28713e12ba0137ed",
+                {
+                    center: [19.0, -89.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f65bd75ed569ea2daee2a74f5bc4c414 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f65bd75ed569ea2daee2a74f5bc4c414.addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var poly_line_ca117af39c52dab667e43ae01c0eaa62 = L.polyline(
+                [[21.1619, -86.8515], [20.2114, -87.4654], [18.7836, -88.3817], [18.5086, -89.4044], [17.484, -91.9861], [19.8536, -90.533], [20.9674, -89.6237], [20.687, -88.5686], [21.1619, -86.8515]],
+                {"bubblingMouseEvents": true, "color": "#d4651f", "dashArray": "10, 8", "dashOffset": null, "fill": false, "fillColor": "#d4651f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            poly_line_ca117af39c52dab667e43ae01c0eaa62.bindTooltip(
+                `<div>
+                     Tren Maya route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_989b677f2fd262f09d5e7b75436d3828 = L.marker(
+                [21.1619, -86.8515],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_e1eb392896362ac986ab7243b0a8b607 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58ab085ef9440cb2fcc46357cc39e436 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1fbfdc789c394b131a68bcb9ba6d488a = $(`<div id="html_1fbfdc789c394b131a68bcb9ba6d488a" style="width: 100.0%; height: 100.0%;"><b>Cancun</b><br>Day 1 (overnight)</div>`)[0];
+                popup_58ab085ef9440cb2fcc46357cc39e436.setContent(html_1fbfdc789c394b131a68bcb9ba6d488a);
+            
+        
+
+        marker_989b677f2fd262f09d5e7b75436d3828.bindPopup(popup_58ab085ef9440cb2fcc46357cc39e436)
+        ;
+
+        
+    
+    
+            marker_989b677f2fd262f09d5e7b75436d3828.bindTooltip(
+                `<div>
+                     Cancun
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_989b677f2fd262f09d5e7b75436d3828.setIcon(icon_e1eb392896362ac986ab7243b0a8b607);
+            
+    
+            var marker_2f1f6c96f0b08d7c6a470687445ede81 = L.marker(
+                [20.2114, -87.4654],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_b7577bc1538051608da50ff4d2cacd0d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a5f6772987f787c208200e107bd4c73 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_223cb08a2d8b40add050f90575658c65 = $(`<div id="html_223cb08a2d8b40add050f90575658c65" style="width: 100.0%; height: 100.0%;"><b>Tulum</b><br>Day 2 (overnight)</div>`)[0];
+                popup_0a5f6772987f787c208200e107bd4c73.setContent(html_223cb08a2d8b40add050f90575658c65);
+            
+        
+
+        marker_2f1f6c96f0b08d7c6a470687445ede81.bindPopup(popup_0a5f6772987f787c208200e107bd4c73)
+        ;
+
+        
+    
+    
+            marker_2f1f6c96f0b08d7c6a470687445ede81.bindTooltip(
+                `<div>
+                     Tulum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f1f6c96f0b08d7c6a470687445ede81.setIcon(icon_b7577bc1538051608da50ff4d2cacd0d);
+            
+    
+            var marker_a797f4c56df9b5bf285ee7443686ed08 = L.marker(
+                [18.7836, -88.3817],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_5c7a46dc4c577e18f6c1eaa3fe03633a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27e29e8310b8ec842fba29e9b7cc92a5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7e61d817c32e2d815ec7bc6beb1442db = $(`<div id="html_7e61d817c32e2d815ec7bc6beb1442db" style="width: 100.0%; height: 100.0%;"><b>Bacalar</b><br>Day 3 (overnight)</div>`)[0];
+                popup_27e29e8310b8ec842fba29e9b7cc92a5.setContent(html_7e61d817c32e2d815ec7bc6beb1442db);
+            
+        
+
+        marker_a797f4c56df9b5bf285ee7443686ed08.bindPopup(popup_27e29e8310b8ec842fba29e9b7cc92a5)
+        ;
+
+        
+    
+    
+            marker_a797f4c56df9b5bf285ee7443686ed08.bindTooltip(
+                `<div>
+                     Bacalar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a797f4c56df9b5bf285ee7443686ed08.setIcon(icon_5c7a46dc4c577e18f6c1eaa3fe03633a);
+            
+    
+            var marker_6a8bcf39a331a8e6d74654a893bf6616 = L.marker(
+                [18.5086, -89.4044],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_0e0f7fcfc3aa5c37c7e6aedcab830fad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c40c3d131d7c7deff4c4fa8eb7860c8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cc98ef8e74fec500aa263b07f3048bb3 = $(`<div id="html_cc98ef8e74fec500aa263b07f3048bb3" style="width: 100.0%; height: 100.0%;"><b>Xpujil</b><br>Day 4 (overnight)</div>`)[0];
+                popup_2c40c3d131d7c7deff4c4fa8eb7860c8.setContent(html_cc98ef8e74fec500aa263b07f3048bb3);
+            
+        
+
+        marker_6a8bcf39a331a8e6d74654a893bf6616.bindPopup(popup_2c40c3d131d7c7deff4c4fa8eb7860c8)
+        ;
+
+        
+    
+    
+            marker_6a8bcf39a331a8e6d74654a893bf6616.bindTooltip(
+                `<div>
+                     Xpujil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a8bcf39a331a8e6d74654a893bf6616.setIcon(icon_0e0f7fcfc3aa5c37c7e6aedcab830fad);
+            
+    
+            var marker_94145ef10b3d80d32e3467d5914befc7 = L.marker(
+                [17.484, -91.9861],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_d2e8e41a60d27b49f64d69790a11277c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d4ab4c15c934cc867d1a1cf46594da2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_570b54203ec67e295732effeb2da62e3 = $(`<div id="html_570b54203ec67e295732effeb2da62e3" style="width: 100.0%; height: 100.0%;"><b>Palenque</b><br>Day 6 (overnight)</div>`)[0];
+                popup_7d4ab4c15c934cc867d1a1cf46594da2.setContent(html_570b54203ec67e295732effeb2da62e3);
+            
+        
+
+        marker_94145ef10b3d80d32e3467d5914befc7.bindPopup(popup_7d4ab4c15c934cc867d1a1cf46594da2)
+        ;
+
+        
+    
+    
+            marker_94145ef10b3d80d32e3467d5914befc7.bindTooltip(
+                `<div>
+                     Palenque
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_94145ef10b3d80d32e3467d5914befc7.setIcon(icon_d2e8e41a60d27b49f64d69790a11277c);
+            
+    
+            var marker_4eb81992b701000dfd580fe2c2fa28dd = L.marker(
+                [19.8536, -90.533],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_41231918ff0a02dc19a56736bb3aec0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2abd21f6a06286766a85fbf69c71441 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c4a0e046c93f0066d73882c472242a29 = $(`<div id="html_c4a0e046c93f0066d73882c472242a29" style="width: 100.0%; height: 100.0%;"><b>Campeche</b><br>Day 8 (overnight)</div>`)[0];
+                popup_e2abd21f6a06286766a85fbf69c71441.setContent(html_c4a0e046c93f0066d73882c472242a29);
+            
+        
+
+        marker_4eb81992b701000dfd580fe2c2fa28dd.bindPopup(popup_e2abd21f6a06286766a85fbf69c71441)
+        ;
+
+        
+    
+    
+            marker_4eb81992b701000dfd580fe2c2fa28dd.bindTooltip(
+                `<div>
+                     Campeche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4eb81992b701000dfd580fe2c2fa28dd.setIcon(icon_41231918ff0a02dc19a56736bb3aec0c);
+            
+    
+            var marker_8479f8ce800baede4295f059d45969b0 = L.marker(
+                [20.9674, -89.6237],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_9ae1653379693917c7cab5d9680a8438 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ce7d9d2eec3972a766bfdc852f0837a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6440b8ee0e48ca429bb3ee1a37e44d32 = $(`<div id="html_6440b8ee0e48ca429bb3ee1a37e44d32" style="width: 100.0%; height: 100.0%;"><b>Merida</b><br>Day 10 (overnight)</div>`)[0];
+                popup_0ce7d9d2eec3972a766bfdc852f0837a.setContent(html_6440b8ee0e48ca429bb3ee1a37e44d32);
+            
+        
+
+        marker_8479f8ce800baede4295f059d45969b0.bindPopup(popup_0ce7d9d2eec3972a766bfdc852f0837a)
+        ;
+
+        
+    
+    
+            marker_8479f8ce800baede4295f059d45969b0.bindTooltip(
+                `<div>
+                     Merida
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8479f8ce800baede4295f059d45969b0.setIcon(icon_9ae1653379693917c7cab5d9680a8438);
+            
+    
+            var marker_955d9d2df90406552d1551e7aceac312 = L.marker(
+                [20.687, -88.5686],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_cfc565c52020e2ab2798488ecd2edd52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_898ea76e8df63c3720a58a5ea70e9d94 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c57ab6614fb1b36e76a4ac5573219d2a = $(`<div id="html_c57ab6614fb1b36e76a4ac5573219d2a" style="width: 100.0%; height: 100.0%;"><b>Chichen Itza</b><br>Day 11</div>`)[0];
+                popup_898ea76e8df63c3720a58a5ea70e9d94.setContent(html_c57ab6614fb1b36e76a4ac5573219d2a);
+            
+        
+
+        marker_955d9d2df90406552d1551e7aceac312.bindPopup(popup_898ea76e8df63c3720a58a5ea70e9d94)
+        ;
+
+        
+    
+    
+            marker_955d9d2df90406552d1551e7aceac312.bindTooltip(
+                `<div>
+                     Chichen Itza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_955d9d2df90406552d1551e7aceac312.setIcon(icon_cfc565c52020e2ab2798488ecd2edd52);
+            
+    
+            var marker_5326cdfa425c0717058dcd2f7d85b003 = L.marker(
+                [21.0792, -86.7767],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_ab25dadca0370a9402d71ae8f4247126 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed9abf9b4db4828239f2249e46376b23 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dba4dd4a0d1521603550a54c16571eb5 = $(`<div id="html_dba4dd4a0d1521603550a54c16571eb5" style="width: 100.0%; height: 100.0%;"><b>El Rey</b><br><i>Ruins</i><br><br>Nearest: Cancun</div>`)[0];
+                popup_ed9abf9b4db4828239f2249e46376b23.setContent(html_dba4dd4a0d1521603550a54c16571eb5);
+            
+        
+
+        marker_5326cdfa425c0717058dcd2f7d85b003.bindPopup(popup_ed9abf9b4db4828239f2249e46376b23)
+        ;
+
+        
+    
+    
+            marker_5326cdfa425c0717058dcd2f7d85b003.bindTooltip(
+                `<div>
+                     El Rey
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5326cdfa425c0717058dcd2f7d85b003.setIcon(icon_ab25dadca0370a9402d71ae8f4247126);
+            
+    
+            var marker_47109926909e8914f5df5f6e603282e3 = L.marker(
+                [21.0825, -86.7694],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_0be90fdf4fa041bd347af6ede9d3629e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bba9de1cfdd613d983e79afc5123504b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4958f113367e1eeb4244de7dbcf109ce = $(`<div id="html_4958f113367e1eeb4244de7dbcf109ce" style="width: 100.0%; height: 100.0%;"><b>San Miguelito</b><br><i>Ruins</i><br><br>Nearest: Cancun</div>`)[0];
+                popup_bba9de1cfdd613d983e79afc5123504b.setContent(html_4958f113367e1eeb4244de7dbcf109ce);
+            
+        
+
+        marker_47109926909e8914f5df5f6e603282e3.bindPopup(popup_bba9de1cfdd613d983e79afc5123504b)
+        ;
+
+        
+    
+    
+            marker_47109926909e8914f5df5f6e603282e3.bindTooltip(
+                `<div>
+                     San Miguelito
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_47109926909e8914f5df5f6e603282e3.setIcon(icon_0be90fdf4fa041bd347af6ede9d3629e);
+            
+    
+            var marker_5fccd61fcbd6ae6f039d0990c557cf87 = L.marker(
+                [21.24, -86.7658],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_7835e952de8e38cafca52eb7759ea5ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72bfc7fed0462dd30c84af160a003bad = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fd68da92bbe263074773cebe4357748f = $(`<div id="html_fd68da92bbe263074773cebe4357748f" style="width: 100.0%; height: 100.0%;"><b>El Meco</b><br><i>Ruins</i><br><br>Nearest: Cancun</div>`)[0];
+                popup_72bfc7fed0462dd30c84af160a003bad.setContent(html_fd68da92bbe263074773cebe4357748f);
+            
+        
+
+        marker_5fccd61fcbd6ae6f039d0990c557cf87.bindPopup(popup_72bfc7fed0462dd30c84af160a003bad)
+        ;
+
+        
+    
+    
+            marker_5fccd61fcbd6ae6f039d0990c557cf87.bindTooltip(
+                `<div>
+                     El Meco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5fccd61fcbd6ae6f039d0990c557cf87.setIcon(icon_7835e952de8e38cafca52eb7759ea5ae);
+            
+    
+            var marker_c73d72b79253423257d5cf6288f7a354 = L.marker(
+                [20.4908, -87.7347],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_7936ee5fb20c543b56860107771a139c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a32caeda92feec8c054a447ad1b0a0a9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c0fd5f3d11b547c6294abd8f017c917f = $(`<div id="html_c0fd5f3d11b547c6294abd8f017c917f" style="width: 100.0%; height: 100.0%;"><b>Coba</b><br><i>Ruins</i><br><br>Nearest: Tulum</div>`)[0];
+                popup_a32caeda92feec8c054a447ad1b0a0a9.setContent(html_c0fd5f3d11b547c6294abd8f017c917f);
+            
+        
+
+        marker_c73d72b79253423257d5cf6288f7a354.bindPopup(popup_a32caeda92feec8c054a447ad1b0a0a9)
+        ;
+
+        
+    
+    
+            marker_c73d72b79253423257d5cf6288f7a354.bindTooltip(
+                `<div>
+                     Coba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c73d72b79253423257d5cf6288f7a354.setIcon(icon_7936ee5fb20c543b56860107771a139c);
+            
+    
+            var marker_da796f669103b82b5e8f4708fec23530 = L.marker(
+                [20.2578, -87.6217],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_d52cde246831ab86d33a8d408524a0ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b5d32ce7dc88f1c04445a5f7a04f197 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6c218988b0bfe4582895cf9c13166ac7 = $(`<div id="html_6c218988b0bfe4582895cf9c13166ac7" style="width: 100.0%; height: 100.0%;"><b>Muyil</b><br><i>Ruins</i><br><br>Nearest: Tulum</div>`)[0];
+                popup_8b5d32ce7dc88f1c04445a5f7a04f197.setContent(html_6c218988b0bfe4582895cf9c13166ac7);
+            
+        
+
+        marker_da796f669103b82b5e8f4708fec23530.bindPopup(popup_8b5d32ce7dc88f1c04445a5f7a04f197)
+        ;
+
+        
+    
+    
+            marker_da796f669103b82b5e8f4708fec23530.bindTooltip(
+                `<div>
+                     Muyil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da796f669103b82b5e8f4708fec23530.setIcon(icon_d52cde246831ab86d33a8d408524a0ea);
+            
+    
+            var marker_2fb3bb54824e8edd8c2a05acfd87e5bb = L.marker(
+                [19.0431, -88.3436],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_da93f5c779ccbfaabf3d22f5d8dd6a56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b101dcbba73ca9b9ac303b0d8ec4feb2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_54b22160f7ac99be8567d181df6df222 = $(`<div id="html_54b22160f7ac99be8567d181df6df222" style="width: 100.0%; height: 100.0%;"><b>Chacchoben</b><br><i>Ruins</i><br><br>Nearest: Bacalar</div>`)[0];
+                popup_b101dcbba73ca9b9ac303b0d8ec4feb2.setContent(html_54b22160f7ac99be8567d181df6df222);
+            
+        
+
+        marker_2fb3bb54824e8edd8c2a05acfd87e5bb.bindPopup(popup_b101dcbba73ca9b9ac303b0d8ec4feb2)
+        ;
+
+        
+    
+    
+            marker_2fb3bb54824e8edd8c2a05acfd87e5bb.bindTooltip(
+                `<div>
+                     Chacchoben
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2fb3bb54824e8edd8c2a05acfd87e5bb.setIcon(icon_da93f5c779ccbfaabf3d22f5d8dd6a56);
+            
+    
+            var marker_94e292b9eb33f0b34a97f4566666586a = L.marker(
+                [18.3925, -88.9772],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_9afb3cccca947ecfeeca01c9a8d5736d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_516260a199021c5689d6a311842925ce = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_365b8d5eb96ca9e42097fb26fb493e3d = $(`<div id="html_365b8d5eb96ca9e42097fb26fb493e3d" style="width: 100.0%; height: 100.0%;"><b>Kohunlich</b><br><i>Ruins</i><br><br>Nearest: Chetumal</div>`)[0];
+                popup_516260a199021c5689d6a311842925ce.setContent(html_365b8d5eb96ca9e42097fb26fb493e3d);
+            
+        
+
+        marker_94e292b9eb33f0b34a97f4566666586a.bindPopup(popup_516260a199021c5689d6a311842925ce)
+        ;
+
+        
+    
+    
+            marker_94e292b9eb33f0b34a97f4566666586a.bindTooltip(
+                `<div>
+                     Kohunlich
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_94e292b9eb33f0b34a97f4566666586a.setIcon(icon_9afb3cccca947ecfeeca01c9a8d5736d);
+            
+    
+            var marker_54764b5d296586b17ddf09a2ccca53bd = L.marker(
+                [18.3833, -88.9444],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_d369d86b82e2a76a48785627a6f6af4c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bfa94e39239240da767088bcd33533ea = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1d698475080c66b65b76f4cdded18c58 = $(`<div id="html_1d698475080c66b65b76f4cdded18c58" style="width: 100.0%; height: 100.0%;"><b>Dzibanche</b><br><i>Ruins</i><br><br>Nearest: Chetumal</div>`)[0];
+                popup_bfa94e39239240da767088bcd33533ea.setContent(html_1d698475080c66b65b76f4cdded18c58);
+            
+        
+
+        marker_54764b5d296586b17ddf09a2ccca53bd.bindPopup(popup_bfa94e39239240da767088bcd33533ea)
+        ;
+
+        
+    
+    
+            marker_54764b5d296586b17ddf09a2ccca53bd.bindTooltip(
+                `<div>
+                     Dzibanche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54764b5d296586b17ddf09a2ccca53bd.setIcon(icon_d369d86b82e2a76a48785627a6f6af4c);
+            
+    
+            var marker_b814c4b5da0f22d4039707c106453e9b = L.marker(
+                [18.5214, -88.3019],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_177c921ad6766e6db2863988de6c5cd2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_975998c65e3329c4d911b35cf8b24684 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b74ce3f2563ba34d6e09ff06a3cadc04 = $(`<div id="html_b74ce3f2563ba34d6e09ff06a3cadc04" style="width: 100.0%; height: 100.0%;"><b>Oxtankah</b><br><i>Ruins</i><br><br>Nearest: Chetumal</div>`)[0];
+                popup_975998c65e3329c4d911b35cf8b24684.setContent(html_b74ce3f2563ba34d6e09ff06a3cadc04);
+            
+        
+
+        marker_b814c4b5da0f22d4039707c106453e9b.bindPopup(popup_975998c65e3329c4d911b35cf8b24684)
+        ;
+
+        
+    
+    
+            marker_b814c4b5da0f22d4039707c106453e9b.bindTooltip(
+                `<div>
+                     Oxtankah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b814c4b5da0f22d4039707c106453e9b.setIcon(icon_177c921ad6766e6db2863988de6c5cd2);
+            
+    
+            var marker_b3e9ba1b3bac863ea7e4d7a848f80107 = L.marker(
+                [18.7547, -89.4669],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_f1e850fe0445da1d2825406f67addab1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16932f50a8bf484441770c1607e66c38 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4d3a36e957d04c2cc0772275a9807db3 = $(`<div id="html_4d3a36e957d04c2cc0772275a9807db3" style="width: 100.0%; height: 100.0%;"><b>Becan</b><br><i>Ruins</i><br><br>Nearest: Xpujil</div>`)[0];
+                popup_16932f50a8bf484441770c1607e66c38.setContent(html_4d3a36e957d04c2cc0772275a9807db3);
+            
+        
+
+        marker_b3e9ba1b3bac863ea7e4d7a848f80107.bindPopup(popup_16932f50a8bf484441770c1607e66c38)
+        ;
+
+        
+    
+    
+            marker_b3e9ba1b3bac863ea7e4d7a848f80107.bindTooltip(
+                `<div>
+                     Becan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3e9ba1b3bac863ea7e4d7a848f80107.setIcon(icon_f1e850fe0445da1d2825406f67addab1);
+            
+    
+            var marker_09bb8d6c44da1225530071c9eeb83539 = L.marker(
+                [18.7589, -89.4822],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_60e7c77fdd426fdddb26b73f4d5f1368 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2c0f3bc2bd0beae230b9946dd8b9e13 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8787ad931570ae40ea7c20bcff0eb5d0 = $(`<div id="html_8787ad931570ae40ea7c20bcff0eb5d0" style="width: 100.0%; height: 100.0%;"><b>Chicanna</b><br><i>Ruins</i><br><br>Nearest: Xpujil</div>`)[0];
+                popup_e2c0f3bc2bd0beae230b9946dd8b9e13.setContent(html_8787ad931570ae40ea7c20bcff0eb5d0);
+            
+        
+
+        marker_09bb8d6c44da1225530071c9eeb83539.bindPopup(popup_e2c0f3bc2bd0beae230b9946dd8b9e13)
+        ;
+
+        
+    
+    
+            marker_09bb8d6c44da1225530071c9eeb83539.bindTooltip(
+                `<div>
+                     Chicanna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09bb8d6c44da1225530071c9eeb83539.setIcon(icon_60e7c77fdd426fdddb26b73f4d5f1368);
+            
+    
+            var marker_aba7b70195d0c0d7955e84a91d5513a9 = L.marker(
+                [18.5086, -89.4044],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_84ab3d04d82d28f3f7481d8bbf75180f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_703e456678026e795e7286564b69dc5f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a73c735bc3412e80d2786c2793deed12 = $(`<div id="html_a73c735bc3412e80d2786c2793deed12" style="width: 100.0%; height: 100.0%;"><b>Xpujil Ruins</b><br><i>Ruins</i><br><br>Nearest: Xpujil</div>`)[0];
+                popup_703e456678026e795e7286564b69dc5f.setContent(html_a73c735bc3412e80d2786c2793deed12);
+            
+        
+
+        marker_aba7b70195d0c0d7955e84a91d5513a9.bindPopup(popup_703e456678026e795e7286564b69dc5f)
+        ;
+
+        
+    
+    
+            marker_aba7b70195d0c0d7955e84a91d5513a9.bindTooltip(
+                `<div>
+                     Xpujil Ruins
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aba7b70195d0c0d7955e84a91d5513a9.setIcon(icon_84ab3d04d82d28f3f7481d8bbf75180f);
+            
+    
+            var marker_f6992cb0b3ffb545bea7c56bbc4d6a82 = L.marker(
+                [18.5833, -90.0167],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_fa797be0370218d7f83b95bb8ca1c76c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae5a5ce2678d95c510b958f34f55bf25 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cdc9929ef00521149c8bb284be5a6828 = $(`<div id="html_cdc9929ef00521149c8bb284be5a6828" style="width: 100.0%; height: 100.0%;"><b>Balamku</b><br><i>Ruins</i><br><br>Nearest: Xpujil</div>`)[0];
+                popup_ae5a5ce2678d95c510b958f34f55bf25.setContent(html_cdc9929ef00521149c8bb284be5a6828);
+            
+        
+
+        marker_f6992cb0b3ffb545bea7c56bbc4d6a82.bindPopup(popup_ae5a5ce2678d95c510b958f34f55bf25)
+        ;
+
+        
+    
+    
+            marker_f6992cb0b3ffb545bea7c56bbc4d6a82.bindTooltip(
+                `<div>
+                     Balamku
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6992cb0b3ffb545bea7c56bbc4d6a82.setIcon(icon_fa797be0370218d7f83b95bb8ca1c76c);
+            
+    
+            var marker_3e671af005ab3079f0777df77272dc21 = L.marker(
+                [18.1056, -89.8128],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_01511309fa818eb6b72b101a021b368f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b25407311e9bb2686b4193b8076bf5c9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7434a60ec3122fca67b6d2ee82b6be83 = $(`<div id="html_7434a60ec3122fca67b6d2ee82b6be83" style="width: 100.0%; height: 100.0%;"><b>Calakmul</b><br><i>Ruins</i><br><br>Nearest: Xpujil</div>`)[0];
+                popup_b25407311e9bb2686b4193b8076bf5c9.setContent(html_7434a60ec3122fca67b6d2ee82b6be83);
+            
+        
+
+        marker_3e671af005ab3079f0777df77272dc21.bindPopup(popup_b25407311e9bb2686b4193b8076bf5c9)
+        ;
+
+        
+    
+    
+            marker_3e671af005ab3079f0777df77272dc21.bindTooltip(
+                `<div>
+                     Calakmul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3e671af005ab3079f0777df77272dc21.setIcon(icon_01511309fa818eb6b72b101a021b368f);
+            
+    
+            var marker_9d55da91b6e7490b1136d9307202decf = L.marker(
+                [17.7667, -91.8833],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_665b8d3e62b870f12ef4167f72ee2615 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9382d3f3981a49ba425b8b90ad8ce0e3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9ab40d36724e0f15e073773582c72250 = $(`<div id="html_9ab40d36724e0f15e073773582c72250" style="width: 100.0%; height: 100.0%;"><b>Pomona</b><br><i>Ruins</i><br><br>Nearest: Palenque</div>`)[0];
+                popup_9382d3f3981a49ba425b8b90ad8ce0e3.setContent(html_9ab40d36724e0f15e073773582c72250);
+            
+        
+
+        marker_9d55da91b6e7490b1136d9307202decf.bindPopup(popup_9382d3f3981a49ba425b8b90ad8ce0e3)
+        ;
+
+        
+    
+    
+            marker_9d55da91b6e7490b1136d9307202decf.bindTooltip(
+                `<div>
+                     Pomona
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9d55da91b6e7490b1136d9307202decf.setIcon(icon_665b8d3e62b870f12ef4167f72ee2615);
+            
+    
+            var marker_89118e2209c0d3969e55755dc5e74b0a = L.marker(
+                [17.8, -91.3],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_b832bab4ea9ec7cfd41d3224f9837fd5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_404d947e5ebe4a4f569c43852bb15a3f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_975a3083e562389cba205e55ff96fe88 = $(`<div id="html_975a3083e562389cba205e55ff96fe88" style="width: 100.0%; height: 100.0%;"><b>Moral-Reforma</b><br><i>Ruins</i><br><br>Nearest: Palenque</div>`)[0];
+                popup_404d947e5ebe4a4f569c43852bb15a3f.setContent(html_975a3083e562389cba205e55ff96fe88);
+            
+        
+
+        marker_89118e2209c0d3969e55755dc5e74b0a.bindPopup(popup_404d947e5ebe4a4f569c43852bb15a3f)
+        ;
+
+        
+    
+    
+            marker_89118e2209c0d3969e55755dc5e74b0a.bindTooltip(
+                `<div>
+                     Moral-Reforma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_89118e2209c0d3969e55755dc5e74b0a.setIcon(icon_b832bab4ea9ec7cfd41d3224f9837fd5);
+            
+    
+            var marker_4e10a8731b1e7e4ec065501a55077703 = L.marker(
+                [17.2553, -92.02],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_74deab2911776236154bcbd65d7e0ffe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f88bd4869da5cb058b5813e2649aa7f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2e45b21d2b2e6196378760369c1dd9b6 = $(`<div id="html_2e45b21d2b2e6196378760369c1dd9b6" style="width: 100.0%; height: 100.0%;"><b>Agua Azul</b><br><i>Waterfall</i><br><br>Nearest: Palenque</div>`)[0];
+                popup_3f88bd4869da5cb058b5813e2649aa7f.setContent(html_2e45b21d2b2e6196378760369c1dd9b6);
+            
+        
+
+        marker_4e10a8731b1e7e4ec065501a55077703.bindPopup(popup_3f88bd4869da5cb058b5813e2649aa7f)
+        ;
+
+        
+    
+    
+            marker_4e10a8731b1e7e4ec065501a55077703.bindTooltip(
+                `<div>
+                     Agua Azul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e10a8731b1e7e4ec065501a55077703.setIcon(icon_74deab2911776236154bcbd65d7e0ffe);
+            
+    
+            var marker_4ea82795d728a76ad0f0355269458035 = L.marker(
+                [17.3833, -91.9833],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_b6cb497eaf31d1c6bccce75b56901e2e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_573f8662c09a8a6c82428d6e2db34180 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2ade79cbdf90e97b07c81c7c0fa416f7 = $(`<div id="html_2ade79cbdf90e97b07c81c7c0fa416f7" style="width: 100.0%; height: 100.0%;"><b>Misol-Ha</b><br><i>Waterfall</i><br><br>Nearest: Palenque</div>`)[0];
+                popup_573f8662c09a8a6c82428d6e2db34180.setContent(html_2ade79cbdf90e97b07c81c7c0fa416f7);
+            
+        
+
+        marker_4ea82795d728a76ad0f0355269458035.bindPopup(popup_573f8662c09a8a6c82428d6e2db34180)
+        ;
+
+        
+    
+    
+            marker_4ea82795d728a76ad0f0355269458035.bindTooltip(
+                `<div>
+                     Misol-Ha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ea82795d728a76ad0f0355269458035.setIcon(icon_b6cb497eaf31d1c6bccce75b56901e2e);
+            
+    
+            var marker_7ba325d5c5b5639b1e5e3d0a392d12a5 = L.marker(
+                [19.5789, -90.2042],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_461f2060385c54c041b53b54da05a8ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5cde91737bbd420d966a05808080513 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ed810d5ee46b19efb669442630d502c1 = $(`<div id="html_ed810d5ee46b19efb669442630d502c1" style="width: 100.0%; height: 100.0%;"><b>Edzna</b><br><i>Ruins</i><br><br>Nearest: Campeche</div>`)[0];
+                popup_e5cde91737bbd420d966a05808080513.setContent(html_ed810d5ee46b19efb669442630d502c1);
+            
+        
+
+        marker_7ba325d5c5b5639b1e5e3d0a392d12a5.bindPopup(popup_e5cde91737bbd420d966a05808080513)
+        ;
+
+        
+    
+    
+            marker_7ba325d5c5b5639b1e5e3d0a392d12a5.bindTooltip(
+                `<div>
+                     Edzna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7ba325d5c5b5639b1e5e3d0a392d12a5.setIcon(icon_461f2060385c54c041b53b54da05a8ef);
+            
+    
+            var marker_1091b9dfa4a19a7e633f14c422d9489f = L.marker(
+                [20.9575, -89.9547],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_4357dc61acdee538bd018e0aa00634dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b74f57bbee1e5516b49c7a1a7498e077 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_161af35f4300dc532c3b7934e20fb39c = $(`<div id="html_161af35f4300dc532c3b7934e20fb39c" style="width: 100.0%; height: 100.0%;"><b>Uxmal</b><br><i>Ruins</i><br><br>Nearest: Merida</div>`)[0];
+                popup_b74f57bbee1e5516b49c7a1a7498e077.setContent(html_161af35f4300dc532c3b7934e20fb39c);
+            
+        
+
+        marker_1091b9dfa4a19a7e633f14c422d9489f.bindPopup(popup_b74f57bbee1e5516b49c7a1a7498e077)
+        ;
+
+        
+    
+    
+            marker_1091b9dfa4a19a7e633f14c422d9489f.bindTooltip(
+                `<div>
+                     Uxmal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1091b9dfa4a19a7e633f14c422d9489f.setIcon(icon_4357dc61acdee538bd018e0aa00634dc);
+            
+    
+            var marker_38451b28a8e9250ace2775af2cf04562 = L.marker(
+                [20.8289, -89.6522],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_94aeab10adcc133814f8b60daeb7aa80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c9d430d9012fa7aee918b29263976b9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b50d410872b1b5d39854eb2703081e45 = $(`<div id="html_b50d410872b1b5d39854eb2703081e45" style="width: 100.0%; height: 100.0%;"><b>Kabah</b><br><i>Ruins</i><br><br>Nearest: Merida</div>`)[0];
+                popup_2c9d430d9012fa7aee918b29263976b9.setContent(html_b50d410872b1b5d39854eb2703081e45);
+            
+        
+
+        marker_38451b28a8e9250ace2775af2cf04562.bindPopup(popup_2c9d430d9012fa7aee918b29263976b9)
+        ;
+
+        
+    
+    
+            marker_38451b28a8e9250ace2775af2cf04562.bindTooltip(
+                `<div>
+                     Kabah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_38451b28a8e9250ace2775af2cf04562.setIcon(icon_94aeab10adcc133814f8b60daeb7aa80);
+            
+    
+            var marker_c12bfe6ccfd5b071f8e1d662cebea6b5 = L.marker(
+                [20.8356, -89.6806],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_2eefb35c2fec546164d39ed2cf348f47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1086b268ae96aafd9e0254c10b13ae68 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b6f6b2d7fec78e586def4c1ec3b2cfea = $(`<div id="html_b6f6b2d7fec78e586def4c1ec3b2cfea" style="width: 100.0%; height: 100.0%;"><b>Sayil</b><br><i>Ruins</i><br><br>Nearest: Merida</div>`)[0];
+                popup_1086b268ae96aafd9e0254c10b13ae68.setContent(html_b6f6b2d7fec78e586def4c1ec3b2cfea);
+            
+        
+
+        marker_c12bfe6ccfd5b071f8e1d662cebea6b5.bindPopup(popup_1086b268ae96aafd9e0254c10b13ae68)
+        ;
+
+        
+    
+    
+            marker_c12bfe6ccfd5b071f8e1d662cebea6b5.bindTooltip(
+                `<div>
+                     Sayil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c12bfe6ccfd5b071f8e1d662cebea6b5.setIcon(icon_2eefb35c2fec546164d39ed2cf348f47);
+            
+    
+            var marker_a821334ba6a03d4af945531bb0f87c2d = L.marker(
+                [20.8608, -89.7353],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_d20b8de6976cea36a9f0968a95c179e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_adfe3ba59e4316e2ef42e51a1a2b12a0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_13ac0f7ac8777376db1aba2bb75dee52 = $(`<div id="html_13ac0f7ac8777376db1aba2bb75dee52" style="width: 100.0%; height: 100.0%;"><b>Labna</b><br><i>Ruins</i><br><br>Nearest: Merida</div>`)[0];
+                popup_adfe3ba59e4316e2ef42e51a1a2b12a0.setContent(html_13ac0f7ac8777376db1aba2bb75dee52);
+            
+        
+
+        marker_a821334ba6a03d4af945531bb0f87c2d.bindPopup(popup_adfe3ba59e4316e2ef42e51a1a2b12a0)
+        ;
+
+        
+    
+    
+            marker_a821334ba6a03d4af945531bb0f87c2d.bindTooltip(
+                `<div>
+                     Labna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a821334ba6a03d4af945531bb0f87c2d.setIcon(icon_d20b8de6976cea36a9f0968a95c179e6);
+            
+    
+            var marker_e445e973e082ece66ff63ddbe9377b0a = L.marker(
+                [21.0472, -89.5889],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_a3523beb215a43e73b632d0e6cfbe68f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4811bda0d687876c193afe65118d651c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7d437e6ee8c6d971af640011a84fa5db = $(`<div id="html_7d437e6ee8c6d971af640011a84fa5db" style="width: 100.0%; height: 100.0%;"><b>Dzibilchaltun</b><br><i>Ruins</i><br><br>Nearest: Merida</div>`)[0];
+                popup_4811bda0d687876c193afe65118d651c.setContent(html_7d437e6ee8c6d971af640011a84fa5db);
+            
+        
+
+        marker_e445e973e082ece66ff63ddbe9377b0a.bindPopup(popup_4811bda0d687876c193afe65118d651c)
+        ;
+
+        
+    
+    
+            marker_e445e973e082ece66ff63ddbe9377b0a.bindTooltip(
+                `<div>
+                     Dzibilchaltun
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e445e973e082ece66ff63ddbe9377b0a.setIcon(icon_a3523beb215a43e73b632d0e6cfbe68f);
+            
+    
+            var marker_f29c7c735097e9dce6f211a98cf7e955 = L.marker(
+                [20.8897, -88.145],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_9bdceeef693fa67d3063cf5c0dea33ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dad398135f289b2120cc56b2733d58b1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_052d2549a7b56eef80c33f7daff1a507 = $(`<div id="html_052d2549a7b56eef80c33f7daff1a507" style="width: 100.0%; height: 100.0%;"><b>Ek Balam</b><br><i>Ruins</i><br><br>Nearest: Valladolid</div>`)[0];
+                popup_dad398135f289b2120cc56b2733d58b1.setContent(html_052d2549a7b56eef80c33f7daff1a507);
+            
+        
+
+        marker_f29c7c735097e9dce6f211a98cf7e955.bindPopup(popup_dad398135f289b2120cc56b2733d58b1)
+        ;
+
+        
+    
+    
+            marker_f29c7c735097e9dce6f211a98cf7e955.bindTooltip(
+                `<div>
+                     Ek Balam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f29c7c735097e9dce6f211a98cf7e955.setIcon(icon_9bdceeef693fa67d3063cf5c0dea33ef);
+            
+    
+            var marker_c4d94300e86ea84ec58a1d4b6d3d5af2 = L.marker(
+                [20.6896, -88.2016],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_cefe88bfe052593185d19d65a31f2f83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2bcea5121410f62e4625f0e36cb56e43 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e93f9e5197a2b6c2f95e778fda913199 = $(`<div id="html_e93f9e5197a2b6c2f95e778fda913199" style="width: 100.0%; height: 100.0%;"><b>Valladolid</b><br><i>Town</i><br><br>Nearest: Valladolid</div>`)[0];
+                popup_2bcea5121410f62e4625f0e36cb56e43.setContent(html_e93f9e5197a2b6c2f95e778fda913199);
+            
+        
+
+        marker_c4d94300e86ea84ec58a1d4b6d3d5af2.bindPopup(popup_2bcea5121410f62e4625f0e36cb56e43)
+        ;
+
+        
+    
+    
+            marker_c4d94300e86ea84ec58a1d4b6d3d5af2.bindTooltip(
+                `<div>
+                     Valladolid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c4d94300e86ea84ec58a1d4b6d3d5af2.setIcon(icon_cefe88bfe052593185d19d65a31f2f83);
+            
+    
+            var marker_74bcfacaa61d8fbd873f4299bbdada6f = L.marker(
+                [20.929, -89.017],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_fc3d4f1d5f7de18aa84cc044b1f7a600 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9cceb2018fc9356447d94e32750c559b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_96d6646a3354db9b0bd12c92f8eed95a = $(`<div id="html_96d6646a3354db9b0bd12c92f8eed95a" style="width: 100.0%; height: 100.0%;"><b>Izamal</b><br><i>Town</i><br><br>Nearest: Izamal</div>`)[0];
+                popup_9cceb2018fc9356447d94e32750c559b.setContent(html_96d6646a3354db9b0bd12c92f8eed95a);
+            
+        
+
+        marker_74bcfacaa61d8fbd873f4299bbdada6f.bindPopup(popup_9cceb2018fc9356447d94e32750c559b)
+        ;
+
+        
+    
+    
+            marker_74bcfacaa61d8fbd873f4299bbdada6f.bindTooltip(
+                `<div>
+                     Izamal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_74bcfacaa61d8fbd873f4299bbdada6f.setIcon(icon_fc3d4f1d5f7de18aa84cc044b1f7a600);
+            
+    
+            var marker_2e32b58405a9db9c0d0dd4f4d87e3afc = L.marker(
+                [21.0367, -86.8764],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_1cd7587c230aa1f1e7fbfd0f8ea5a114 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8de3d35fe21252061d5e33d2a604762 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1cf7818b4c2a1f1db368624678243318 = $(`<div id="html_1cf7818b4c2a1f1db368624678243318" style="width: 100.0%; height: 100.0%;"><b>Cancun Airport (CUN)</b><br>Arrival: London -> Cancun</div>`)[0];
+                popup_f8de3d35fe21252061d5e33d2a604762.setContent(html_1cf7818b4c2a1f1db368624678243318);
+            
+        
+
+        marker_2e32b58405a9db9c0d0dd4f4d87e3afc.bindPopup(popup_f8de3d35fe21252061d5e33d2a604762)
+        ;
+
+        
+    
+    
+            marker_2e32b58405a9db9c0d0dd4f4d87e3afc.bindTooltip(
+                `<div>
+                     Cancun Airport (CUN)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e32b58405a9db9c0d0dd4f4d87e3afc.setIcon(icon_1cd7587c230aa1f1e7fbfd0f8ea5a114);
+            
+    
+            var marker_0ace7cc436a8798347f8aa3cc556af48 = L.marker(
+                [20.937, -89.6578],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_35e513a747b3b9217a59086dd8c75597 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_63b9d4ee5c2a766a9a9fb92cdf12c29c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_868e1b0be00e69b28f54febd3e296cba = $(`<div id="html_868e1b0be00e69b28f54febd3e296cba" style="width: 100.0%; height: 100.0%;"><b>Merida Airport (MID)</b><br>Domestic: Merida -> Mexico City</div>`)[0];
+                popup_63b9d4ee5c2a766a9a9fb92cdf12c29c.setContent(html_868e1b0be00e69b28f54febd3e296cba);
+            
+        
+
+        marker_0ace7cc436a8798347f8aa3cc556af48.bindPopup(popup_63b9d4ee5c2a766a9a9fb92cdf12c29c)
+        ;
+
+        
+    
+    
+            marker_0ace7cc436a8798347f8aa3cc556af48.bindTooltip(
+                `<div>
+                     Merida Airport (MID)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0ace7cc436a8798347f8aa3cc556af48.setIcon(icon_35e513a747b3b9217a59086dd8c75597);
+            
+    
+            var marker_bea788330df5cf9ade38620795cda758 = L.marker(
+                [19.4361, -99.0719],
+                {
+}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            var icon_416ed26e2d5c39c170eaa7877de89e65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26894634be63aab18f52547d41b78961 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f720810132c861193fccd7f0a74f1d85 = $(`<div id="html_f720810132c861193fccd7f0a74f1d85" style="width: 100.0%; height: 100.0%;"><b>Mexico City (MEX)</b><br>Departure: Mexico City -> London</div>`)[0];
+                popup_26894634be63aab18f52547d41b78961.setContent(html_f720810132c861193fccd7f0a74f1d85);
+            
+        
+
+        marker_bea788330df5cf9ade38620795cda758.bindPopup(popup_26894634be63aab18f52547d41b78961)
+        ;
+
+        
+    
+    
+            marker_bea788330df5cf9ade38620795cda758.bindTooltip(
+                `<div>
+                     Mexico City (MEX)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bea788330df5cf9ade38620795cda758.setIcon(icon_416ed26e2d5c39c170eaa7877de89e65);
+            
+    
+            var poly_line_9b94083525548955d18a06ca0af8dee9 = L.polyline(
+                [[51.47, -0.4543], [21.0367, -86.8764]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5, 10", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            poly_line_9b94083525548955d18a06ca0af8dee9.bindTooltip(
+                `<div>
+                     London -> Cancun (inbound flight)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bce543ca84f192875eb1fe79d2627bb3 = L.polyline(
+                [[20.937, -89.6578], [19.4361, -99.0719]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": "5, 10", "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            poly_line_bce543ca84f192875eb1fe79d2627bb3.bindTooltip(
+                `<div>
+                     Merida -> Mexico City (domestic flight)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ed77fc654781638618dc5de8b96a0f98 = L.polyline(
+                [[19.4361, -99.0719], [51.47, -0.4543]],
+                {"bubblingMouseEvents": true, "color": "darkpurple", "dashArray": "5, 10", "dashOffset": null, "fill": false, "fillColor": "darkpurple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_7f6e969eea40b36a28713e12ba0137ed);
+        
+    
+            poly_line_ed77fc654781638618dc5de8b96a0f98.bindTooltip(
+                `<div>
+                     Mexico City -> London (return flight)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
