@@ -6,6 +6,7 @@ from folium import Element, Icon, Marker, PolyLine, Popup
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 OSM_DATA_PATH = PROJECT_ROOT / "trenmaya_osm.json"
+CALAKMUL_ROAD_PATH = PROJECT_ROOT / "calakmul_road.json"
 OUTPUT_PATH = PROJECT_ROOT / "route-map.html"
 
 
@@ -103,11 +104,11 @@ def main() -> None:
         ("Chichen Itza (ruins)  UNESCO",  20.6829,  -88.5686,  "https://en.wikipedia.org/wiki/Chichen_Itza"),
     ]
 
-    # Rental-car drive Xpujil -> Calakmul
-    calakmul_road = [
-        (18.52670, -89.39620),   # Xpujil station
-        (18.1056,  -89.8128),    # Calakmul ruins
-    ]
+    # Driving route Xpujil -> Calakmul (OSRM routing)
+    route_data = json.loads(CALAKMUL_ROAD_PATH.read_text(encoding="utf-8"))
+    calakmul_road = [(lat, lon) for lon, lat in route_data["geometry"]["coordinates"]]
+    road_distance = route_data["distance"] / 1000
+    road_duration = route_data["duration"] / 60
 
     # Build map
     m = folium.Map(location=[19.2, -89.5], zoom_start=7, tiles="OpenStreetMap")
@@ -120,7 +121,7 @@ def main() -> None:
     # Calakmul drive
     PolyLine(
         calakmul_road, color="#8B4513", weight=3, opacity=0.7,
-        dash_array="6, 6", tooltip="Drive Xpujil -> Calakmul  (~2 h, 110 km)",
+        dash_array="6, 6", tooltip=f"Drive Xpujil -> Calakmul  (~{road_duration:.0f} min, {road_distance:.0f} km)",
     ).add_to(m)
 
     # Station markers
