@@ -1,0 +1,11 @@
+[project]
+name = "tren-maya-trip"
+version = "0.1.0"
+description = "Tren Maya 12-day archaeological route map"
+requires-python = ">=3.12"
+dependencies = [
+    "folium>=0.19",
+]
+
+[project.scripts]
+build-map = "build_map:main"
